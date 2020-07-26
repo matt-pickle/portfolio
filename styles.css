@@ -1,0 +1,37 @@
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* NAVIGATION */
+
+nav ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  width: 500px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+nav a {
+  text-decoration: none;
+  padding: .25em;
+  transition: border-bottom 250ms;
+}
+
+nav a:hover,
+nav a:focus {
+  border-bottom: 3px solid blue;
+}
