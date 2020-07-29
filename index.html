@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Matt Pickle: Web Developer</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/mpickle86" target="_blank">GitHub</a></li>
-      </ul>
-    </nav>
+    <header>
+    <button id="open-nav-button">&#9776;</button>
+      <nav class="nav">
+        <button id="close-nav-button">&times;</button>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/mpickle86" target="_blank">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section id="home">
         <h1>Home</h1>
       </section>
+
       <section id="about-me">
         <h1>About Me</h1>
       </section>
+
       <section id="projects">
         <h1>Projects</h1>
       </section>
+      
       <section id="resume">
         <h1>Resume</h1>
       </section>
     </main>
     
   </body>
+  <script src="./javascript.js"></script>
 </html>
