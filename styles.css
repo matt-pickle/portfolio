@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: arial, sans-serif;
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.6;
 }
 
@@ -22,6 +22,19 @@ main {
 img {
   display: block;
   max-width: 100%;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  background: rgb(30, 30, 30);
+  background-image: url("./images/Temp\ Background\ Image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  filter: grayscale(100%);
+  width: 100%;
+  height: 100vh;
 }
 
 /* NAVIGATION */
@@ -135,16 +148,13 @@ nav a {
    "arrow";
   justify-items: center;
   align-items: center;
-  background: rgb(49, 49, 49);
-  background-image: url("./images/Temp\ Background\ Image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
   height: 100vh;
 }
 
 .home-text-container {
   grid-area: title;
+  display: grid;
+  justify-items: center;
 }
 
 .home-title {
@@ -155,10 +165,27 @@ nav a {
   margin: 0;
 }
 
+.home-title::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: .5em;
+  background: blue;
+  margin-top: -.5em;
+  margin-left: .5em;
+}
+
 .home-subtitle {
   color: white;
+  font-weight: 400;
   text-align: center;
-  margin: 0;
+  margin: 0 0 1em 0;
+}
+
+.home-text {
+  color: white;
+  max-width: 85%;
+  margin: 0 0 1em 0;
 }
 
 .fa-chevron-down {
@@ -182,10 +209,19 @@ nav a {
   .fa-chevron-down {
     font-size: 4rem;
     cursor:pointer;
+    transition: transform 200ms;
   }
 
   .fa-chevron-down:hover,
   .fa-chevron-down:focus {
     color: blue;
+    transform: scale(1.25);
   }
+}
+
+/* PROJECTS */
+
+.projects {
+  grid-area: projects;
+
 }
