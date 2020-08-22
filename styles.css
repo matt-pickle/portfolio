@@ -14,7 +14,6 @@ main {
   display: grid;
   grid-template-areas:
     "home"
-    "about-me"
     "projects"
     "resume";
 }
@@ -161,7 +160,6 @@ nav a {
   color: white;
   font-size: 3rem;
   line-height: 1.25;
-  text-align: center;
   margin: 0;
 }
 
@@ -221,7 +219,119 @@ nav a {
 
 /* PROJECTS */
 
-.projects {
+#projects {
   grid-area: projects;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1em;
+}
 
+.section-title {
+  color: white;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 1em 0;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: .5em;
+  background: blue;
+  margin-top: -.5em;
+  margin-left: .5em;
+}
+
+.projects-container {
+  display: grid;
+  width: auto;
+  grid-gap: 1em;
+  justify-items: center;
+  align-items: center;
+}
+
+.project {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas:
+    "title title title title title"
+    ". demo-btn . code-btn ."
+    ". . . . .";
+  grid-template-columns: .5em auto .5em auto .5em;
+  grid-template-rows: auto auto .5em;
+  background-color: gray;
+  background-position: center;
+  background-size: cover;
+  opacity: 70%;
+  width: 200px;
+  height: 300px;
+  transition: 200ms;
+}
+
+.project:hover,
+.project:active {
+  transform: scale(1.05);
+  background-color: lightgray;
+  opacity: 100%;
+}
+
+.project-title {
+  grid-area: title;
+  text-align: center;
+  width: 100%;
+  background: rgba(0,0,0,85%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.project-btn {
+  background: rgba(0,0,0,85%);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: .5em 1.25em;
+  transition: background-color 200ms;
+}
+
+.project-btn:hover,
+.project-btn:active {
+  background-color: blue;
+}
+
+.demo-btn {
+  grid-area: demo-btn;
+  align-self: end;
+}
+
+.code-btn {
+  grid-area: code-btn;
+  align-self: end;
+}
+
+.workout-tracker {
+  background-image: url("./images/workout-tracker-thumbnail.png");
+}
+
+.journal {
+  background-image: url("./images/journal-thumbnail.png");
+}
+
+@media (min-width: 450px) {
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .projects-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 650px) {
+  .projects-container {
+    grid-template-columns: auto auto auto;
+  }
 }
