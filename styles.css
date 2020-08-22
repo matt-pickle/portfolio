@@ -15,7 +15,7 @@ main {
   grid-template-areas:
     "home"
     "projects"
-    "resume";
+    "skills";
 }
 
 img {
@@ -217,7 +217,7 @@ nav a {
   }
 }
 
-/* PROJECTS */
+/* PROJECTS SECTION*/
 
 #projects {
   grid-area: projects;
@@ -333,5 +333,50 @@ nav a {
 @media (min-width: 650px) {
   .projects-container {
     grid-template-columns: auto auto auto;
+  }
+}
+
+/* SKILLS SECTION */
+
+#skills {
+  grid-area: skills;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1em;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* grid-template-rows: auto auto auto; */
+  /* grid-auto-flow: column; */
+  grid-column-gap: 5em;
+  grid-row-gap: .5em;
+  list-style: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+.skills-list li::after {
+  content: "";
+  display: block;
+  width: .5em;
+  height: .5em;
+  background: blue;
+  margin-top: -1em;
+  margin-left: -1em;
+}
+
+@media (max-width: 950px) {
+  .skills-list {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-list {
+    grid-template-columns: auto;
   }
 }
