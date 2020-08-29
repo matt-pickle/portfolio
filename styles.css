@@ -27,7 +27,7 @@ img {
   position: fixed;
   z-index: -1;
   background: rgb(30, 30, 30);
-  background-image: url("./images/background-2.jpg");
+  background-image: url("./images/background.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
