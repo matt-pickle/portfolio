@@ -27,7 +27,7 @@ img {
   position: fixed;
   z-index: -1;
   background: rgb(30, 30, 30);
-  background-image: url("./images/Temp\ Background\ Image.jpg");
+  background-image: url("./images/background-2.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
@@ -318,6 +318,10 @@ nav a {
 
 .journal {
   background-image: url("./images/journal-thumbnail.png");
+}
+
+.pirate-translator {
+  background-image: url("./images/pirate-translator-thumbnail.png");
 }
 
 @media (min-width: 450px) {
