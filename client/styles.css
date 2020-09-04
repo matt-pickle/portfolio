@@ -182,9 +182,9 @@ nav a {
 }
 
 .home-text {
+  justify-self: start;
   color: white;
-  max-width: 85%;
-  margin: 0 0 1em 0;
+  margin: 0 2em 1em;
 }
 
 .fa-chevron-down {
