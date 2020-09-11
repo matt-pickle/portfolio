@@ -15,7 +15,8 @@ main {
   grid-template-areas:
     "home"
     "projects"
-    "skills";
+    "skills"
+    "contact";
 }
 
 img {
@@ -389,5 +390,63 @@ nav a {
 @media (max-width: 600px) {
   .skills-list {
     grid-template-columns: auto;
+  }
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  grid-area: contact;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  justify-items: center;
+  min-height: 100vh;
+}
+
+#contact-form {
+  align-self: center;
+  display: grid;
+  width: 90%;
+}
+
+.label {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.contact-input {
+  height: 2em;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+
+#message {
+  resize: none;
+  height: 17em;
+  font-size: 1.25rem;
+  margin-bottom: 1.5em;
+}
+
+.submit {
+  background: rgba(0,0,0,85%);
+  color: white;
+  border: none;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: .5em;
+  margin-bottom: 1em;
+  transition: background-color 200ms;
+  cursor: pointer;
+}
+
+.submit:hover,
+.submit:active {
+  background-color: blue;
+}
+
+@media (min-width: 550px) {
+  #contact-form {
+    width: 500px;
   }
 }
