@@ -348,7 +348,7 @@ nav a {
   }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 900px) {
   .projects-container {
     grid-template-columns: auto auto auto auto;
   }
