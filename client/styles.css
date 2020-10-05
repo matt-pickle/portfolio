@@ -316,6 +316,10 @@ nav a {
   align-self: end;
 }
 
+.weather {
+  background-image: url("./images/weather-thumbnail.png");
+}
+
 .workout-tracker {
   background-image: url("./images/workout-tracker-thumbnail.png");
 }
@@ -341,6 +345,12 @@ nav a {
 @media (min-width: 650px) {
   .projects-container {
     grid-template-columns: auto auto auto;
+  }
+}
+
+@media (min-width: 850px) {
+  .projects-container {
+    grid-template-columns: auto auto auto auto;
   }
 
   .section-title {
